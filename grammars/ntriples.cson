@@ -1,0 +1,50 @@
+'name': 'N-Triples'
+'scopeName': 'source.ntriples'
+'fileTypes': [
+  'nt'
+]
+'patterns': [
+  {
+    'comment': 'URI'
+    'name': 'entity.name.tag.uri.turtle'
+    'match': '<[^<>\"{}|^`\\]\\\\]*>'
+  }
+  {
+    'comment':  'Typed literal'
+    'name': 'literal.ntriples'
+    'match': '(\"[^\"]*\")(\\^\\^)(<[^<>\"{}|^`\\]\\\\]*>|\\w*:[^\\s)]+)'
+    'captures':
+      '1':
+        'name': 'string.ntriples'
+      '2':
+        'name': 'keyword.operator.ntriples'
+      '3':
+        'name': 'support.type.ntriples'
+  }
+  {
+    'comment':  'Blank node'
+    'name': 'constant.complex.turtle'
+    'match': '(_:)([^\\s]+)'
+    'captures':
+      '1':
+        'name': 'constant.language.turtle'
+      '2':
+        'name': 'entity.name.class.turtle'
+  }
+  {
+    'comment':  'String literal'
+    'name': 'constant.other.ntriples'
+    'match': '(\"(?:(?:[^\\x22\\x5C\\xA\\xD])|\\\\[tbnrf\\\"\'])*\")(@[a-zA-Z-]+)?'
+    'captures':
+      '1':
+        'name': 'string.quoted.double.ntriples'
+      '2':
+        'name': 'keyword.operator.ntriples'
+      '3':
+        'name': 'support.type.ntriples'
+  }
+  {
+    'name': 'comment.line.number-sign.turtle'
+    'match': '#.*$'
+  }
+]

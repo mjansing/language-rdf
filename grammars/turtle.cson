@@ -1,0 +1,71 @@
+'name': 'Turtle'
+'scopeName': 'source.turtle'
+'fileTypes': [
+  'ttl'
+]
+'patterns': [
+  {
+    'comment': 'Keywords'
+    'name': 'keyword.control.turtle'
+    'match': '(?:^|\\s+)(?:@base|@prefix)\\b'
+  }
+  {
+    'comment': 'URI'
+    'name': 'entity.name.tag.turtle'
+    'match': '<[^<>\"{}|^`\\]\\\\]*>'
+  }
+  {
+    'comment':  'Prefix / prefixed URI'
+    'name': 'constant.complex.turtle'
+    'match': '(\\w*:)([^\\s|/^*?+{}()]*)'
+    'captures':
+      '1':
+        'name': 'entity.name.tag.namespace.turtle'
+      '2':
+        'name': 'entity.name.tag.prefixed-uri.turtle'
+  }
+  {
+    'comment': 'The special triple predicate a'
+    'name': 'keyword.operator.turtle'
+    'match': '\\sa\\s'
+  }
+  {
+    'comment':  'Typed literal'
+    'name': 'literal.turtle'
+    'match': '(\"[^\"]*\")(\\^\\^)(<[^<>\"{}|^`\\]\\\\]*>|\\w*:[^\\s)]+)'
+    'captures':
+      '1':
+        'name': 'string.turtle'
+      '2':
+        'name': 'keyword.operator.turtle'
+      '3':
+        'name': 'support.type.turtle'
+  }
+  {
+    'comment':  'String literal'
+    'name': 'string.turtle'
+    'match': '(\"(?:(?:[^\\x22\\x5C\\xA\\xD])|\\\\[tbnrf\\\"\'])*\")(@[a-zA-Z-]+)?'
+    'captures':
+      '1':
+        'name': 'string.quoted.double.turtle'
+      '2':
+        'name': 'keyword.operator.turtle'
+      '3':
+        'name': 'support.type.turtle'
+  }
+  {
+    'comment': 'Comments'
+    'name': 'comment.line.number-sign.turtle'
+    'match': '#.*$'
+  }  
+  {
+    'comment': 'Numeric literal'
+    'name': 'constant.numeric.turtle'
+    'match': '\\b[+-]?(?:\\d+|[0-9]+\\.[0-9]*|\\.[0-9]+(?:[eE][+-]?\\d+)?)\\b'
+  }
+  {
+    'comment': 'Boolean'
+    'name': 'constant.language.turtle'
+    'match': '\\b(?:true|false)\\b'
+  }
+]

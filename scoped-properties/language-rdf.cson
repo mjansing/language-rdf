@@ -1,0 +1,6 @@
+'.source.turtle':
+  'editor':
+    'commentStart': '# '
+'.source.ntriples':
+  'editor':
+    'commentStart': '# '

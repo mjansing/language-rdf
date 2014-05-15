@@ -2,7 +2,7 @@
   "name": "language-rdf",
   "main": "./lib/language-rdf",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "RDF language support in Atom",
   "activationEvents": ["language-rdf:toggle"],
   "repository": "https://github.com/atom/language-rdf",
   "license": "MIT",

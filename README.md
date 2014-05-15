@@ -1,5 +1,8 @@
 # language-rdf package
 
-A short description of your package.
+Adds syntax highlighting to RDF files in Atom. Package supports Turtle (.ttl) and N-Triples (.nt).
 
-![A screenshot of your spankin' package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+Inspired by [SPARQL Sublime Text 2 Package](https://github.com/patchspace/sparql-sublime).
+
+Contributions are greatly appreciated. Please fork this repository and open a
+pull request to add snippets, make grammar tweaks, etc.
