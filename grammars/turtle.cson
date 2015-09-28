@@ -44,7 +44,7 @@
   {
     'comment':  'String literal'
     'name': 'string.turtle'
-    'match': '(\"(?:(?:[^\\x22\\x5C\\xA\\xD])|\\\\[tbnrf\\\"\'])*\")(@[a-zA-Z-]+)?'
+    'match': '(\"(?:(?:[^\\x22\\x5C\\xA\\xD])|\\\\[tbnrf\"\'\\\\])*\")(@[a-zA-Z-]+)?'
     'captures':
       '1':
         'name': 'string.quoted.double.turtle'
@@ -57,7 +57,7 @@
     'comment': 'Comments'
     'name': 'comment.line.number-sign.turtle'
     'match': '#.*$'
-  }  
+  }
   {
     'comment': 'Numeric literal'
     'name': 'constant.numeric.turtle'
