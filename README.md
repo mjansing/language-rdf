@@ -4,5 +4,9 @@ Adds syntax highlighting to RDF files in Atom. Package supports Turtle (.ttl) an
 
 Inspired by [SPARQL Sublime Text 2 Package](https://github.com/patchspace/sparql-sublime).
 
+Grammar reference:
+
+  * Turtle: http://www.w3.org/TR/turtle/
+
 Contributions are greatly appreciated. Please fork this repository and open a
 pull request to add snippets, make grammar tweaks, etc.
