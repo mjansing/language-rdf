@@ -42,9 +42,65 @@
         'name': 'support.type.turtle'
   }
   {
+    'comment':  'String literal long quote'
+    'name': 'string-long-quote.turtle'
+    'begin': '(\"{3})'
+    'end': '(\"{3})(@[a-zA-Z-]+)?'
+    'patterns': [
+      {
+        'match': '((?:(?:\"{1,2})?(?:[^\"\\x5C]|\\\\[tbnrf\"\'\\\\]))*)'
+        'captures':
+          '1':
+            'name': 'string.quoted.triple.turtle'
+      }
+    ]
+    'beginCaptures':
+      '1':
+        'name': 'string.quoted.triple.turtle'
+    'endCaptures':
+      '1':
+        'name': 'string.quoted.triple.turtle'
+      '2':
+        'name': 'keyword.operator.turtle'
+  }
+  {
+    'comment':  'String literal long single quote'
+    'name': 'string-long-single-quote.turtle'
+    'begin': '(\'{3})'
+    'end': '(\'{3})(@[a-zA-Z-]+)?'
+    'patterns': [
+      {
+        'match': '((?:(?:\'{1,2})?(?:[^\'\\x5C]|\\\\[tbnrf\"\'\\\\]))*)'
+        'captures':
+          '1':
+            'name': 'string.quoted.triple.turtle'
+      }
+    ]
+    'beginCaptures':
+      '1':
+        'name': 'string.quoted.triple.turtle'
+    'endCaptures':
+      '1':
+        'name': 'string.quoted.triple.turtle'
+      '2':
+        'name': 'keyword.operator.turtle'
+  }
+  {
     'comment':  'String literal'
     'name': 'string.turtle'
-    'match': '(\"(?:(?:[^\\x22\\x5C\\xA\\xD])|\\\\[tbnrf\\\"\'])*\")(@[a-zA-Z-]+)?'
+    'match': '(\"(?:(?:[^\\x22\\x5C\\xA\\xD])|\\\\[tbnrf\"\'\\\\])*\")(@[a-zA-Z-]+)?'
+    'captures':
+      '1':
+        'name': 'string.quoted.double.turtle'
+      '2':
+        'name': 'keyword.operator.turtle'
+      '3':
+        'name': 'support.type.turtle'
+  }
+  {
+    'comment':  'String literal single quote'
+    'name': 'string-single-quote.turtle'
+    'match': '(\'(?:(?:[^\'\\x5C\\xA\\xD])|\\\\[tbnrf\"\'\\\\])*\')(@[a-zA-Z-]+)?'
     'captures':
       '1':
         'name': 'string.quoted.double.turtle'
@@ -57,7 +113,7 @@
     'comment': 'Comments'
     'name': 'comment.line.number-sign.turtle'
     'match': '#.*$'
-  }  
+  }
   {
     'comment': 'Numeric literal'
     'name': 'constant.numeric.turtle'

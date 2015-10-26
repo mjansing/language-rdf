@@ -1,3 +1,7 @@
+## 0.3.0
+* Turtle: Fix backslash escape.
+* Turtle: Add multiline string literal support.
+
 ## 0.2.0
 * atom 1.0 api compatibility
 
