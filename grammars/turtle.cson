@@ -17,7 +17,7 @@
   {
     'comment':  'Prefix / prefixed URI'
     'name': 'constant.complex.turtle'
-    'match': '(\\w*:)([^\\s|/^*?+{}()]*)'
+    'match': '((?:\\w(?:(?:\\w|-|[\\xB7\\x{0300}-\\x{036F}\\x{203F}-\\x{2040}]|\\.)*(?:\\w|-|[\\xB7\\x{0300}-\\x{036F}\\x{203F}-\\x{2040}]))?)?:)([^\\s|/^*?+{}()]*)'
     'captures':
       '1':
         'name': 'entity.name.tag.namespace.turtle'
