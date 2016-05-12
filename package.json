@@ -1,7 +1,7 @@
 {
   "name": "language-rdf",
   "main": "./lib/language-rdf",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "RDF language support in Atom",
   "repository": "https://github.com/mjansing/language-rdf",
   "license": "MIT",
