@@ -1,11 +1,11 @@
-'.source.turtle':
+'.source.turtle, .source.trig':
   'Turtle Skeleton':
     'prefix': 'skel'
     'body': '@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.\n@prefix $1: <http://$2>.\n\n$0'
   'Prefix':
     'prefix': 'prefix'
     'body': '@prefix ${1:rdf}: <${2:http://www.w3.org/1999/02/22-rdf-syntax-ns#}>'
-'.source.ntriples':
+'.source.ntriples, .source.trig':
   'RDF':
     'prefix': 'rdf'
     'body': '<http://www.w3.org/1999/02/22-rdf-syntax-ns#$1> $0'
@@ -21,3 +21,6 @@
   'A (rdf-type)':
     'prefix': 'a'
     'body': '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> $0'
+  'XSD':
+    'prefix': 'xsd'
+    'body': '<http://www.w3.org/2001/XMLSchema#> $0'
