@@ -24,7 +24,6 @@
       '2':
         'name': 'entity.name.tag.prefixed-uri.turtle'
   }
-
   {
     'comment': 'The special triple predicate a'
     'name': 'keyword.operator.turtle'
