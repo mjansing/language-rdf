@@ -1,7 +1,8 @@
 'name': 'Turtle'
 'scopeName': 'source.turtle'
 'fileTypes': [
-  'ttl'
+  'ttl',
+  'trig'
 ]
 'patterns': [
   {
